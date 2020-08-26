@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Binah Assignment</string>
+    <string name="reputation">Reputation: %1$d</string>
+    <string name="tags">Tags: %1$s</string>
+
+    <string name="radio1">All</string>
+    <string name="radio2">Answered</string>
+    <string name="radio3">Unanswered</string>
+
+</resources>
