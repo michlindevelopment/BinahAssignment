@@ -74,8 +74,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             loadData()
         }
-
-
     }
 
     //Recycler view adapter updater
@@ -84,8 +82,6 @@ class MainActivity : AppCompatActivity() {
         adapterList.addAll(questions)
         recyclerView.adapter!!.notifyDataSetChanged()
         mSwipeRefreshLayout.isRefreshing = false
-
-
     }
 
     //Load data from API
@@ -97,7 +93,6 @@ class MainActivity : AppCompatActivity() {
                 .subscribe(this::handleResponse)
         )
     }
-
 
 
     //Response handler for API
@@ -118,6 +113,4 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         outState.putSerializable(INSTANCE_KEY, fixedList)
     }
-
-
 }

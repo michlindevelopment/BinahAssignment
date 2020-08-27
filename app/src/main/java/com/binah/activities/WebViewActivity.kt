@@ -26,6 +26,7 @@ class WebViewActivity : AppCompatActivity() {
                 url?.let { view?.loadUrl(it) }
                 return true
             }
+
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
                 progressBar.visibility = View.GONE

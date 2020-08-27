@@ -14,7 +14,6 @@ import com.squareup.picasso.Picasso
 import org.apache.commons.text.StringEscapeUtils
 import java.util.stream.Collectors
 
-
 class QuestionsRecyclerViewAdapter(
     private val values: ArrayList<ObjectSingleQuestion>,
     private val itemClickListener: OnItemClickListener

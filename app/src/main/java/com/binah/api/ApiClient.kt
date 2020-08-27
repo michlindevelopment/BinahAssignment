@@ -1,4 +1,5 @@
 package com.binah.api
+
 import com.binah.data.DefaultData
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
