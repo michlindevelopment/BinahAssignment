@@ -7,11 +7,11 @@ import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.binah.*
+import com.binah.R
 import com.binah.adapters.OnItemClickListener
 import com.binah.adapters.QuestionsRecyclerViewAdapter
-import com.binah.data.DefaultData.Companion.PAGE_URL
 import com.binah.api.ApiClient
+import com.binah.data.DefaultData.Companion.PAGE_URL
 import com.binah.data.ObjectSingleQuestion
 import com.binah.data.ObjectsQueryResult
 import com.binah.data.Params
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerViewList)
         mSwipeRefreshLayout = findViewById(R.id.swiperefresh)
         compositeDisposable = CompositeDisposable()
+
 
         //Swipe layout for refreshing
         mSwipeRefreshLayout.setOnRefreshListener {
@@ -83,6 +84,8 @@ class MainActivity : AppCompatActivity() {
         adapterList.addAll(questions)
         recyclerView.adapter!!.notifyDataSetChanged()
         mSwipeRefreshLayout.isRefreshing = false
+
+
     }
 
     //Load data from API
@@ -94,6 +97,8 @@ class MainActivity : AppCompatActivity() {
                 .subscribe(this::handleResponse)
         )
     }
+
+
 
     //Response handler for API
     private fun handleResponse(objectsQueryResult: ObjectsQueryResult) {

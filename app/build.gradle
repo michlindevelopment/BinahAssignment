@@ -59,7 +59,8 @@ dependencies {
     //picasso
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
-    testImplementation 'org.mockito:mockito-core:2.7.22'
+    //Apache
+    implementation 'org.apache.commons:commons-text:1.9'
 
 
 }

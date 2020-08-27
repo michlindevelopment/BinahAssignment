@@ -11,6 +11,7 @@ import com.binah.R
 import com.binah.data.DefaultData.Companion.DELIMITER
 import com.binah.data.ObjectSingleQuestion
 import com.squareup.picasso.Picasso
+import org.apache.commons.text.StringEscapeUtils
 import java.util.stream.Collectors
 
 
@@ -33,7 +34,7 @@ class QuestionsRecyclerViewAdapter(
         holder.bind(position, itemClickListener)
         val item = values[position]
 
-        holder.title.text = item.title
+        holder.title.text = StringEscapeUtils.unescapeHtml4(item.title)
         holder.owner.text = item.owner.display_name
         holder.reputation.text = context.getString(R.string.reputation, item.owner.reputation)
         holder.tags.text = context.getString(R.string.tags, item.tags.stream().collect(Collectors.joining(DELIMITER)))
